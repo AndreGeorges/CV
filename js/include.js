@@ -25,3 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
     include("wrapper", "partials/wrapper.html");
 
 });
+
+// pour imprimer le CV
+const printBtn = document.getElementById("print");
+printBtn.addEventListener('click', function () {
+    print();
+});

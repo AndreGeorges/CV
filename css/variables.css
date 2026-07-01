@@ -21,6 +21,7 @@
     --vertfonceturquoisetrans: rgba(60, 110, 119, 0.5);
     --gris: rgba(166, 149, 133);
     --noir: rgba(56, 48, 29);
+    --noirtrans: rgba(56, 48, 29, 0.1);
     --blanc: rgba(231, 226, 207);
 }
 
