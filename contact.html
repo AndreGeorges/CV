@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    </head>
+    <body class="wrapper">
+        <div id="wrapper"></div>
+        <div id="navbar"></div>
+        <div class="contact-container">
+            <form
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                class="contact-left">
+                <div class="contact-left-title">
+                    <h1>Contactez-moi</h1>
+                    <hr>
+                </div>
+                <input type="hidden" name="access_key"
+                    value="0388c457-0274-4350-b928-2ecf0cdc8cf3">
+                <input class="contact-inputs" type="text" name="name"
+                    placeholder="Votre nom" required minlength="2"
+                    maxlength="20">
+                <input class="contact-inputs" type="email" name="email"
+                    placeholder="Votre courriel" required>
+                <textarea class="contact-inputs" name="message"
+                    placeholder="Votre message" required></textarea>
+                <div class="button-container">
+                    <button type="submit">
+                        <!-- <a
+                            href="mailto:andre.georges26373@hotmail.com"> -->
+                        Envoyer !
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                    <button type="reset" value="Vider">Vider<i
+                            class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div>
+
+            </form>
+            <div class="contact-right">
+                <ol class="liste-contact">
+                    <li>Prenez un moment pour imaginer vos rêves les
+                        plus fous!</li>
+                    <li>Faites-nous en part en remplissant le
+                        formulaire.</li>
+                    <li>Envoyez!</li>
+                    <li>Nous vous contacterons dans les 24 heures.</li>
+                </ol>
+            </div>
+        </div>
+        <div id="footer"></div>
+        <script src="js/include.js"></script>
+    </body>
+</html>
