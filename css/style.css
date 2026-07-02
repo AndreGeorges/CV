@@ -10,8 +10,9 @@
 }
 
 .hi {
-    margin-left: 0;
-    margin-top: 0;
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 10%;
 }
 
 .hi h1 {
@@ -20,11 +21,15 @@
     color: var(--blanc);
 }
 
-#code-defilant {
+.bg-accueil::after {
+    content: "";
+    position: absolute;
+    inset: 0;
     background: url(../images/code_deroulant.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    filter: blur(4px);
 
     min-height: 100vh;
     width: 100%;
@@ -34,9 +39,23 @@
     text-align: center;
     margin-bottom: 0;
     animation: animate 120s linear infinite;
-    z-index: -1;
-    /* filter: blur(4px); */
+    transform: scale(1.05); 
+    z-index: -2;
+
 }
+
+/* #code-defilant::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: url("../images/code_deroulant.png") center/cover no-repeat;
+
+    filter: blur(4px);
+    transform: scale(1.05); 
+
+    z-index: -1;
+} */
 
 @keyframes animate {
     from {
