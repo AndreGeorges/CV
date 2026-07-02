@@ -169,8 +169,20 @@ h2 {
     align-items: center;
 }
 
-#print {
-    color: var(--jaunedore);
+.print-section {
+    position: fixed;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    align-items: center;
+    top: 30%;
+    right: 80px;
+}
+
+
+#printcol,
+#printbw {
+
     background-color: var(--noirtrans);
     padding: 5px;
     border-radius: 10px;
@@ -179,22 +191,32 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    position: fixed;
-    top: 30%;
-    right: 80px;
+    text-align: center;
+    gap: 8px;
 }
 
-#print i {
+#printcol {
+    color: var(--vertclair);
+}
+#printbw {
+    color: var(--blanc);
+}
+
+#printcol i,
+#printbw i {
     font-size: 40px;
 }
 
-#print span {
+#printcol span,
+#printbw span {
     font-size: 15px;
 }
 
-#print:hover {
-    color: var(--blanc);
+#printcol:hover {
+    color: var(--vertfonceturquoise);
+}
+#printbw:hover {
+    color: var(--gris);
 }
 
 @media print {
@@ -220,9 +242,35 @@ h2 {
         margin: 0;
         padding: 0;
     }
+    body.bw {
+        filter: grayscale(100%)
+    }
 }
 
+@media printbw {
 
+    body *,
+    .wrapper,
+    #wrapper,
+    #navbar,
+    .bubble {
+        visibility: hidden;
+    }
+
+    .container-cv,
+    .container-cv * {
+        visibility: visible;
+    }
+
+    .container-cv {
+        filter: grayscale(100%);
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
 
 
 

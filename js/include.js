@@ -27,7 +27,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // pour imprimer le CV
-const printBtn = document.getElementById("print");
-printBtn.addEventListener('click', function () {
+const printCol = document.getElementById("printcol");
+printCol.addEventListener('click', function () {
+    print();
+});
+
+const printBw = document.getElementById("printbw");
+printBw.addEventListener('click', function () {
+    document.body.classList.add("bw");
     print();
 });
