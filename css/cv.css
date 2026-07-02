@@ -1,0 +1,275 @@
+/* =====================  CV  ============================== */
+
+.bubble-container-keywords {
+    height: auto;
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    /* z-index: 10; */
+}
+
+.keyword {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 14px;
+    border-radius: 999px;
+
+    position: fixed;
+}
+
+.container-cv {
+    width: 210mm;
+    min-height: 297mm;
+    background-color: var(--beige);
+    margin: 60px auto;
+    /* padding: 20px; */
+    box-shadow: 0 0 40px rgba(56, 48, 29, 0.7);
+}
+
+.header-cv::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(../images/histoire-intelligence-artificielle-ia-robotique-robots-machine-learning.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(0.1px);
+    /* transform: scale(1.1); */
+    z-index: -1;
+}
+
+.header-cv {
+    position: relative;
+    text-align: center;
+    color: var(--noir);
+    overflow: hidden;
+    display: flex;
+    /* gap: 30px; */
+
+}
+
+.img-cv {
+    transition: transform 1s ease;
+    padding: 20px;
+
+}
+
+.img-cv img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: sepia(60%);
+    box-shadow: 0 0 40px rgba(56, 48, 29, 0.7);
+
+}
+
+.img-cv:hover {
+    transform: scale(1.2);
+}
+
+.name-title {
+    flex: 1;
+}
+
+.name-title h1 {
+    margin: 20px;
+    font-size: 42px;
+}
+
+.name-title h3 {
+    margin-top: 0;
+}
+
+hr {
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--jaunedore);
+}
+
+.main {
+    display: flex;
+    width: 100%;
+}
+
+
+.left-cv {
+    flex: 1;
+    background-color: var(--vertfonceturquoisetrans);
+    padding: 10px;
+    color: var(--jaunedore);
+}
+
+.right-cv {
+    flex: 1;
+    padding: 10px;
+}
+
+.card {
+    padding: 5px 10px;
+    margin: 10px;
+    line-height: 17px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(56, 48, 29, 0.2);
+    transition: transform 1s ease;
+
+}
+
+.cd-left {
+    background-color: var(--vertfonceturquoise);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: var(--blanc);
+    box-shadow: 0 0 10px rgba(56, 48, 29, 0.7);
+    color: var(--noir);
+}
+
+
+.skill-graph {
+    width: 100%;
+    text-align: left;
+
+}
+
+.skill-bar {
+    background-color: var(--gris);
+    height: 10px;
+    overflow: hidden;
+    margin-bottom: hidden;
+}
+
+.skill-bar-fill {
+    height: 100%;
+    background-color: var(--vertclair);
+}
+
+.skill-label {
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+i {
+    padding-right: 10px;
+}
+
+h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.print-section {
+    position: fixed;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    align-items: center;
+    top: 30%;
+    right: 80px;
+}
+
+
+#printcol,
+#printbw {
+
+    background-color: var(--noirtrans);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+}
+
+#printcol {
+    color: var(--vertclair);
+}
+#printbw {
+    color: var(--blanc);
+}
+
+#printcol i,
+#printbw i {
+    font-size: 40px;
+}
+
+#printcol span,
+#printbw span {
+    font-size: 15px;
+}
+
+#printcol:hover {
+    color: var(--vertfonceturquoise);
+}
+#printbw:hover {
+    color: var(--gris);
+}
+
+@media print {
+
+    body *,
+    .wrapper,
+    #wrapper,
+    #navbar,
+    .bubble {
+        visibility: hidden;
+    }
+
+    .container-cv,
+    .container-cv * {
+        visibility: visible;
+    }
+
+    .container-cv {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    body.bw {
+        filter: grayscale(100%)
+    }
+}
+
+@media printbw {
+
+    body *,
+    .wrapper,
+    #wrapper,
+    #navbar,
+    .bubble {
+        visibility: hidden;
+    }
+
+    .container-cv,
+    .container-cv * {
+        visibility: visible;
+    }
+
+    .container-cv {
+        filter: grayscale(100%);
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+

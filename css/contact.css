@@ -1,0 +1,129 @@
+/* =====================  CONTACT  ============================== */
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 70px;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.contact-left-title h1 {
+    font-weight: 600;
+    color: var(--blanc);
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.contact-left-title hr {
+    border: none;
+    width: 240px;
+    height: 5px;
+    background-color: var(--blanc);
+    /* border-radius: 20px; */
+    margin-bottom: 20px;
+}
+
+
+.contact-inputs {
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    font-size: 17px;
+    color: var(--noir);
+    border-radius: 10px;
+
+}
+
+.contact-left textarea {
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 10px;
+    max-width: 400px;
+}
+
+.contact-inputs:focus {
+    border: 4px solid var(--bleumarine);
+}
+
+.contact-inputs::placeholder {
+    color: var(--gris);
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 15px;
+}
+
+.contact-left button {
+    display: flex;
+    /* align-items: center; */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: var(--bleumarine);
+    gap: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--bleumarinetrans);
+    color: var(--blanc);
+    cursor: pointer;
+    /* justify-content: space-between; */
+}
+
+.contact-left button i {
+    height: 15px;
+}
+
+.contact-left button i a {
+    height: 15px;
+    text-decoration: none;
+}
+
+.contact-left button:hover {
+    color: var(--bleumarine);
+    background-color: var(--blanc);
+}
+
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+    background-color: var(--bleumarinetrans);
+    padding: 0.1px 20px;
+    border-radius: 10px;
+}
+
+.liste-contact {
+    color: var(--blanc);
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    line-height: 60px;
+}
+
+@media (max-width:800px) {
+    .contact-inputs {
+        width: 80vw;
+    }
+
+    .contact-right {
+        display: none;
+    }
+}
