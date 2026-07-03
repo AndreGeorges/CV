@@ -1,20 +1,31 @@
-
-
-
 .gallery {
-    width: 70%;
-    margin: 4rem auto;
-
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
+    display: flex;
+    gap: 0;
+    align-items: flex-start;
+    margin: 8rem;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute; */
 }
 
-.portfolio-video {
-    width: 30%;
-    aspect-ratio: 16 / 9;
+.gallery-small-video {
+    float: left;
+    width: 20%;
+}
 
-    object-fit: cover;
+.gallery-small-video video {
+    height: 6rem;
+    margin: 0.8rem 0;
+    cursor: pointer;
+    display: block;
+}
 
-    border-radius: 10px;
+.video-container {
+    float: right;
+    width: 70%;
+}
+
+.video-container video {
+    height: 24rem;
 }
