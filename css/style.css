@@ -6,6 +6,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    filter: sepia(60%);
     z-index: -1;
 }
 
@@ -17,8 +18,9 @@
 
 .hi h1 {
     font-weight: 200;
-    font-size: 40px;
+    font-size: var(--font-xl);
     color: var(--blanc);
+    letter-spacing: 0.25rem;
 }
 
 .bg-accueil::after {
@@ -39,23 +41,10 @@
     text-align: center;
     margin-bottom: 0;
     animation: animate 120s linear infinite;
-    transform: scale(1.05); 
+    transform: scale(1.05);
     z-index: -2;
 
 }
-
-/* #code-defilant::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    background: url("../images/code_deroulant.png") center/cover no-repeat;
-
-    filter: blur(4px);
-    transform: scale(1.05); 
-
-    z-index: -1;
-} */
 
 @keyframes animate {
     from {
@@ -64,5 +53,80 @@
 
     to {
         background-position: 0 0;
+    }
+}
+
+/*
+texte qui s'allume et s'eteint
+*/
+
+.moving-text {
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 7%;
+}
+
+.banner-text {
+    font-size: 8rem;
+    color: var(--beige);
+    letter-spacing: 0.75rem;
+
+}
+
+.banner-text::after {
+    content: '';
+    animation: animateText 20s infinite;
+}
+
+
+@keyframes animateText {
+
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        content: "Python";
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    30% {
+        content: "SQL";
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    50% {
+        content: "IA";
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    70% {
+        content: "UI/UX";
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    90% {
+        content: "IoT";
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }

@@ -1,10 +1,11 @@
 * {
     font-family: Quebec, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 100%;
 }
 
 :root {
     --jaunedore: rgba(226, 221, 181);
-    
+
     --rouge: rgba(170, 50, 43, 0.8);
     --rougefonce: rgba(82, 13, 3, 0.8);
     --pourpre: rgba(110, 32, 28, 0.8);
@@ -14,7 +15,7 @@
     --bleumarinetrans: rgba(12, 95, 149, 0.5);
     --bleugris: rgba(120, 160, 175);
     --vert: rgba(120, 160, 175);
-    --vertclair:rgba(145, 172, 120);
+    --vertclair: rgba(145, 172, 120);
     --vertgris: rgba(106, 151, 117);
     --vertolive: rgba(111, 123, 80);
     --vertfonceturquoise: rgba(60, 110, 119);
@@ -23,6 +24,30 @@
     --noir: rgba(56, 48, 29);
     --noirtrans: rgba(56, 48, 29, 0.1);
     --blanc: rgba(231, 226, 207);
+
+    --font-xsmall: 0.75rem;
+    --font-small: 0.85rem;
+    --font-base: 1rem;
+    --font-medium: 1.25rem;
+    --font-large: 1.5rem;
+    --font-xl: 2rem;
+
+    --space-xxs: 0.25rem;
+    /* 4px */
+    --space-xs: 0.5rem;
+    /* 8px */
+    --space-sm: 0.75rem;
+    /* 12px */
+    --space-md: 1rem;
+    /* 16px */
+    --space-lg: 1.5rem;
+    /* 24px */
+    --space-xl: 2rem;
+    /* 32px */
+    --space-2xl: 3rem;
+    /* 48px */
+    --space-3xl: 4rem;
+    /* 64px */
 }
 
 body {
