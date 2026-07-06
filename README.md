@@ -10,4 +10,7 @@ photo blog: me faire dans differents contextes, utilseer filtres de google meet 
 
 PAGE SURMOI.HTML
 texte defilant en arriere plan avec phrases en russe, chinois, turc, etc.
+
+BLOG.HTML
+doit montrer seulement les 3 premières lignes, après ca, on doit cliquer pour lire le reste.
 -->
