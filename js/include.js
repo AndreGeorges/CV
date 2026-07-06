@@ -37,3 +37,9 @@ printBw.addEventListener('click', function () {
     document.body.classList.add("bw");
     print();
 });
+
+// page portfolio
+function enlargeVideo(smallVideo){
+    var fullVideo = document.getElementById("imageBox");
+    fullVideo.src = smallVideo.src;
+}
