@@ -1,0 +1,77 @@
+#about {
+    width: 100%;
+    padding: 1rem;
+    margin: 6rem 0;
+}
+
+.about-me {
+    max-width: 85%;
+    margin: 4rem;
+    /* padding: 2rem; */
+    gap: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-me img {
+    height: auto;
+    width: 35rem;
+    opacity: 0.5;
+    border-radius: 1rem;
+}
+
+.about-info {
+    width: 40rem;
+
+}
+
+.about-info h1 {
+    font-size: 4rem;
+    margin: 0;
+    color: var(--rougefonce);
+}
+
+.about-info h1:hover {
+    color: var(--rouge);
+}
+
+.about-info h5 {
+    font-size: 1.5rem;
+    margin: 0;
+    letter-spacing: 0.2rem;
+    color: var(--vertfonceturquoise);
+}
+
+.about-info p {
+    color: var(--beige);
+}
+
+.about-info p:hover {
+    color: var(--blanc);
+    transition: 0.5s;
+}
+
+.about-info h5:hover {
+    color: var(--vertolive);
+    transition: 0.5s;
+}
+
+button {
+    background-color: var(--vertfonceturquoise);
+    color: var(--beige);
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    border: 0;
+}
+
+button a {
+    text-decoration: none;
+        color: var(--beige);
+}
+
+button:hover {
+    background-color: var(--vertolive);
+    color: var(--blanc);
+    transition: 0.5s;
+}
