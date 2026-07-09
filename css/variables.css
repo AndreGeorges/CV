@@ -96,82 +96,65 @@ body {
 
 .bubble {
     position: fixed;
-    bottom: -50px;
-    min-height: 30px;
-    min-width: 30px;
+    bottom: -3.12rem;
+    min-height: 1.9rem;
+    min-width: 1.9rem;
     border-radius: 50%;
     /* filter: blur(4px); */
     animation: floating 10s linear infinite;
+    background-color: var(--blanc);
+    opacity: 0.2;
 }
 
 .bubble:nth-child(1) {
     left: 0;
     animation-delay: 0.6s;
-    background-color: var(--blanc);
-    opacity: 0.2;
+
 }
 
 .bubble:nth-child(2) {
     left: 10%;
     animation-delay: 3s;
-    background-color: var(--blanc);
-    opacity: 0.2;
 }
 
 .bubble:nth-child(3) {
     left: 20%;
     animation-delay: 2s;
-    background-color: var(--blanc);
-    opacity: 0.2;
 }
 
 .bubble:nth-child(4) {
     left: 30%;
     animation-delay: 5s;
-    background-color: var(--blanc);
-    opacity: 0.2;
 }
 
 .bubble:nth-child(5) {
     left: 40%;
     animation-delay: 1s;
-    background-color: var(--blanc);
-    opacity: 0.2;
 }
 
 .bubble:nth-child(6) {
     left: 50%;
     animation-delay: 7s;
-    background-color: var(--blanc);
-    opacity: 0.2;
 }
 
 .bubble:nth-child(7) {
     left: 60%;
     animation-delay: 4s;
-    background-color: var(--blanc);
-    opacity: 0.2;
 }
 
 .bubble:nth-child(8) {
     left: 70%;
     animation-delay: 8s;
-    background-color: var(--blanc);
-    opacity: 0.2;
 }
 
 .bubble:nth-child(9) {
     left: 80%;
     animation-delay: 6s;
-    background-color: var(--blanc);
-    opacity: 0.2;
 }
 
 .bubble:nth-child(10) {
     left: 90%;
     animation-delay: 4s;
-    background-color: var(--blanc);
-    opacity: 0.2;
 }
 
 @keyframes floating {
@@ -181,19 +164,19 @@ body {
     }
 
     20% {
-        transform: translateX(40px);
+        transform: translateX(2.5rem);
     }
 
     40% {
-        transform: translateX(40px);
+        transform: translateX(2.5rem);
     }
 
     60% {
-        transform: translateX(-40px);
+        transform: translateX(-2.5rem);
     }
 
     80% {
-        transform: translateX(20px);
+        transform: translateX(1.25rem);
     }
 
     100% {
@@ -347,21 +330,18 @@ footer a {
 
 .wave1 {
     background-image: url(../images/border-img/1.png);
-    -webkit-background-size: 50% 80px;
     background-size: 50% 80px;
     animation: vagues 10s linear infinite;
 }
 
 .wave2 {
     background-image: url(../images/border-img/2.png);
-    -webkit-background-size: 50% 100px;
     background-size: 50% 100px;
     animation: vagues 12s linear infinite;
 }
 
 .wave3 {
     background-image: url(../images/border-img/3.png);
-    -webkit-background-size: 50% 80px;
     background-size: 50% 80px;
     animation: vagues 14s linear infinite;
 }
