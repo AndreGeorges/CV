@@ -17,9 +17,17 @@
 .about-me img {
     height: auto;
     width: 35rem;
-    opacity: 0.5;
+    opacity: 0.6;
     border-radius: 1rem;
+    filter: sepia(60%);
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.6);
+    transition: transform 4s ease;
 }
+
+.about-me img:hover {
+    filter: brightness(150%);
+}
+
 
 .about-info {
     width: 40rem;
@@ -66,7 +74,7 @@ button {
 
 button a {
     text-decoration: none;
-        color: var(--beige);
+    color: var(--beige);
 }
 
 button:hover {
