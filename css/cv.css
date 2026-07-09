@@ -60,8 +60,8 @@
 }
 
 .img-cv img {
-    width: 100px;
-    height: 100px;
+    width: 6.25rem;
+    height: 6.25rem;
     cursor: pointer;
     border-radius: 50%;
     object-fit: cover;
@@ -79,8 +79,8 @@
 }
 
 .name-title h1 {
-    margin: 20px;
-    font-size: 42px;
+    margin: 1.25rem;
+    font-size: 2.625rem;
 }
 
 .name-title h3 {
@@ -88,7 +88,7 @@
 }
 
 hr {
-    height: 20px;
+    height: 1.25rem;
     margin: 0;
     padding: 0;
     background-color: var(--jaunedore);
@@ -103,21 +103,21 @@ hr {
 .left-cv {
     flex: 1;
     background-color: var(--vertfonceturquoisetrans);
-    padding: 10px;
+    padding: 0.625rem;
     color: var(--jaunedore);
 }
 
 .right-cv {
     flex: 1;
-    padding: 10px;
+    padding: 0.625rem;
 }
 
 .card {
-    padding: 5px 10px;
-    margin: 10px;
-    line-height: 17px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(56, 48, 29, 0.2);
+    padding: 0.313rem 0.625rem;
+    margin: 0.625rem;
+    line-height: 1.063rem;
+    border-radius: 0.313rem;
+    box-shadow: 0 0 0.625rem rgba(56, 48, 29, 0.2);
     transition: transform 1s ease;
 
 }
@@ -129,7 +129,7 @@ hr {
 .card:hover {
     transform: scale(1.05);
     background-color: var(--blanc);
-    box-shadow: 0 0 10px rgba(56, 48, 29, 0.7);
+    box-shadow: 0 0 0.625rem rgba(56, 48, 29, 0.7);
     color: var(--noir);
 }
 
@@ -142,7 +142,7 @@ hr {
 
 .skill-bar {
     background-color: var(--gris);
-    height: 10px;
+    height: 0.625rem;
     overflow: hidden;
     margin-bottom: hidden;
 }
@@ -221,11 +221,7 @@ h2 {
 
 @media print {
 
-    body *,
-    .wrapper,
-    #wrapper,
-    #navbar,
-    .bubble {
+    body * {
         visibility: hidden;
     }
 
@@ -246,30 +242,3 @@ h2 {
         filter: grayscale(100%)
     }
 }
-
-@media printbw {
-
-    body *,
-    .wrapper,
-    #wrapper,
-    #navbar,
-    .bubble {
-        visibility: hidden;
-    }
-
-    .container-cv,
-    .container-cv * {
-        visibility: visible;
-    }
-
-    .container-cv {
-        filter: grayscale(100%);
-        top: 0;
-        left: 0;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-}
-
-

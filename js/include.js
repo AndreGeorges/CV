@@ -1,3 +1,4 @@
+// va chercher ressource externe, ex: navbar, footer, wrapper
 function include(id, fichier) {
     fetch(fichier)
         .then(res => {
