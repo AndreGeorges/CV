@@ -1,18 +1,17 @@
-<!-- TODO:
+<!-- 
+Bonus 
 
-ajouter une silouhette au wrapper
-CSS3 background Image Animation Tutorial | CSS moving image animation
-https://www.youtube.com/watch?v=VDsyxn2MwVE
+• Mise en ligne sur un serveur web (Apache, GitHub Pages, etc.) : 5 FAIT
+    LIEN VERS LE SITE: https://andregeorges.github.io/CV/cv.html
 
-List style type 
+• Effets supplémentaires sur la barre de navigation (ex : hover, animations CSS) : FAIT
 
-PAGE SURMOI.HTML
-texte defilant en arriere plan avec phrases en russe, chinois, turc, etc.
-photo blog: me faire dans differents contextes, utiliser filtres de google meet ou d'autres sites 
-creatif: meme asterix et cleopatre: oh ca y est j'ai plein d'idees!
-BLOG.HTML
-doit montrer seulement les 3 premières lignes, après ca, on doit cliquer pour lire le reste.
+• Métadonnées SEO : FAIT
+    utilisé OG = Open Graph:  on dit que c'est plus moderne que les anciens outils SEO, surtout 
+    avec les réseaux sociaux: linkedin, facebook
 
-PORTFOLIO
-la barre de defilement n'apparait plus!
+• Utilisation de JavaScript (par exemple, animations ou interactions simples) : FAIT
+    -pour importer la navbar, footer, wrapper dans toutes les pages
+    -pour imprimer le CV en couleur ou en noir et blanc
+    -pour placer la petite vidéo dans la grande videoBox dans la page portfolio
 -->

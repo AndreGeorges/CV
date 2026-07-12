@@ -267,9 +267,14 @@ nav ul li a {
 FOOTER
 ====================================== */
 
+footer {
+    min-height: 300px;
+    /* position: relative; */
+}
+
 .items-footer {
-    width: 100%;
     position: fixed;
+    width: 100%;
     bottom: 20px;
     display: flex;
     align-items: center;
@@ -360,3 +365,65 @@ footer a {
     }
 
 }
+
+/* 
+======================================
+CHARACTER
+====================================== */
+
+.character {
+    position: fixed;
+    background: url(../images/walking.png);
+    background-repeat: no-repeat;
+    width: calc(3000px/5);
+
+    height: 600px;
+    left: 0px;
+    bottom: 0;
+
+    transform: scale(0.25);
+    transform-origin: bottom left;
+    mix-blend-mode: difference;
+
+    z-index: 0;
+
+    /* animation: walking 1s steps(5) infinite, rebond 1s ease-in-out infinite alternate; */
+}
+
+/* forward 60s linear infinite,  */
+
+.page-noire .character {
+    filter: invert(1);
+}
+
+/* @keyframes walking {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -3000px 0;
+    }
+} */
+/* 
+@keyframes forward {
+    from {
+        left: -100px;
+    }
+
+    to {
+        left: 110vw;
+    }
+} */
+
+/* @keyframes rebond {
+
+    0%,
+    100% {
+        bottom: -0.2vh;
+    }
+
+    50% {
+        bottom: 0vh;
+    }
+} */
