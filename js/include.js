@@ -72,7 +72,6 @@ function startCharacter() {
 
         walking: {
             image: "../images/walking.png",
-            flip: false,
             frames: 5,
             frameWidth: 600,
             loop: true,
@@ -82,7 +81,6 @@ function startCharacter() {
 
         stopping: {
             image: "../images/stopping.png",
-            flip: false,
             frames: 5,
             frameWidth: 600,
             loop: false,
@@ -92,7 +90,6 @@ function startCharacter() {
 
         standing: {
             image: "../images/standing.png",
-            flip: false,
             frames: 5,
             frameWidth: 600,
             loop: true,
@@ -101,7 +98,6 @@ function startCharacter() {
         },
         lookingup: {
             image: "../images/lookingup.png",
-            flip: false,
             frames: 5,
             frameWidth: 600,
             loop: true,
@@ -115,11 +111,10 @@ function startCharacter() {
             frameWidth: 600,
             loop: false,
             bounce: true,
-            frameDelay: 200
+            frameDelay: 250
         },
         standing_fl: {
             image: "../images/standing_fl.png",
-            flip: false,
             frames: 5,
             frameWidth: 600,
             loop: true,
@@ -128,7 +123,6 @@ function startCharacter() {
         },
         lookingup_fl: {
             image: "../images/lookingup_fl.png",
-            flip: false,
             frames: 5,
             frameWidth: 600,
             loop: true,
@@ -138,13 +132,29 @@ function startCharacter() {
         turnaround_right: {
             image: "../images/turnaround.png",
             flip: true,
-            // offsetX: -600,
+            reverse: true,
             frames: 5,
             frameWidth: 600,
             loop: false,
             bounce: true,
-            frameDelay: 200
+            frameDelay: 250
         },
+        sitting: {
+            image: "../images/sitting_also_good.png",
+            frames: 5,
+            frameWidth: 600,
+            loop: false,
+            bounce: false,
+            frameDelay: 250
+        },
+        sitting_long: {
+            image: "../images/sitting_fl_lt.png",
+            frames: 5,
+            frameWidth: 600,
+            loop: true,
+            bounce: false,
+            frameDelay: 250
+        }
 
     };
 
@@ -161,7 +171,12 @@ function startCharacter() {
 
         currentAnimation = animation;
 
-        currentFrame = 0;
+        if (animation.reverse) {
+            currentFrame = animation.frames - 1;
+        } else {
+            currentFrame = 0;
+        }
+
         animationTime = 0;
 
         character.style.backgroundImage =
@@ -178,10 +193,19 @@ function startCharacter() {
             return;
         }
         animationTime = 0;
-        currentFrame++;
+        if (currentAnimation.reverse) {
+            currentFrame--;
+        } else {
+            currentFrame++;
+
+        }
 
         // fin du sprite sheet
-        if (currentFrame >= currentAnimation.frames) {
+        if (
+            (!currentAnimation.reverse && currentFrame >= currentAnimation.frames) ||
+            (currentAnimation.reverse && currentFrame < 0)
+
+        ) {
             if (currentAnimation.loop) {
                 currentFrame = 0;
             }
@@ -195,12 +219,20 @@ function startCharacter() {
                         break;
                     case "turnaround":
                         state = "standing_fl";
-                        standingPhase = 5;
+                        // standingPhase = 5;
                         stateTime = 0;
                         setAnimation(animations.standing_fl);
                         break;
-                    // case "turnaround_right":
-
+                    case "turnaround_right":
+                        state = "walking";
+                        // standingPhase = 6;
+                        stateTime = 0;
+                        setAnimation(animations.walking);
+                        break;
+                    case "sitting":
+                        state = "sitting_long";
+                        stateTime = 0;
+                        setAnimation(animations.sitting_long);
                 }
 
             }
@@ -228,6 +260,7 @@ function startCharacter() {
     // const standingDelay= 5000;
     const targetX = window.innerWidth * 0.01;
     const secondTargetX = window.innerWidth * 0.4;
+    const thirdTargetX = window.innerWidth * 0.75;
 
     // -----------------------------
     // Boucle principale
@@ -247,23 +280,22 @@ function startCharacter() {
         if (state === "walking" || state === "walkingtoSecondPosition") {
             x += speed * direction * deltaTime / 16;
         }
-        if (state === "walking" && x >= targetX) {
-            // character.style.transformOrigin = "bottom left";
+        if (state === "walking" && x >= targetX && x < secondTargetX) {
             state = "stopping";
             setAnimation(animations.stopping);
         }
-        if (state === "standing" && standingPhase === 1 && stateTime >= 3000) {
+        if (state === "standing" && standingPhase === 1 && stateTime >= 100) {
             state = "lookingup";
             stateTime = 0;
             setAnimation(animations.lookingup);
         }
-        if (state === "lookingup" && standingPhase === 1 && stateTime >= 3000) {
+        if (state === "lookingup" && standingPhase === 1 && stateTime >= 1000) {
             state = "standing";
             stateTime = 0;
             standingPhase = 2;
             setAnimation(animations.standing);
         }
-        if (state === "standing" && standingPhase === 2 && stateTime >= 3000) {
+        if (state === "standing" && standingPhase === 2 && stateTime >= 1000) {
             state = "walkingtoSecondPosition";
             stateTime = 0;
             standingPhase = 3;
@@ -274,13 +306,13 @@ function startCharacter() {
             standingPhase = 3;
             setAnimation(animations.stopping);
         }
-        if (state === "standing" && standingPhase === 3 && stateTime >= 3000) {
+        if (state === "standing" && standingPhase === 3 && stateTime >= 1000) {
             state = "lookingup";
             stateTime = 0;
             standingPhase = 4;
             setAnimation(animations.lookingup);
         }
-        if (state === "lookingup" && standingPhase === 4 && stateTime >= 3000) {
+        if (state === "lookingup" && standingPhase === 4 && stateTime >= 1000) {
             state = "turnaround";
             stateTime = 0;
             standingPhase = 5;
@@ -292,12 +324,30 @@ function startCharacter() {
             // standingPhase = 5;
             setAnimation(animations.lookingup_fl);
         }
-        // if (state === "lookingup_fl" && standingPhase === 5 && stateTime >= 3000) {
-        //     // character.style.transformOrigin = "bottom center";
-        //     state = "turnaround_right";
-        //     stateTime = 0;
-        //     setAnimation(animations.turnaround_right);
-        // }
+        if (state === "lookingup_fl" && standingPhase === 5 && stateTime >= 1000) {
+            state = "turnaround_right";
+            stateTime = 0;
+            standingPhase = 6;
+            setAnimation(animations.turnaround_right);
+        }
+        if (state === "walking" && standingPhase === 6 && x >= thirdTargetX) {
+            state = "stopping";
+            stateTime = 0;
+            setAnimation(animations.stopping);
+        }
+        if (state === "standing" && standingPhase === 6) {
+            state = "turnaround";
+            stateTime = 0;
+            setAnimation(animations.turnaround);
+        }
+        if (state === "standing_fl" && standingPhase === 6 && stateTime >= 1000) {
+            state = "sitting";
+            stateTime = 0;
+            setAnimation(animations.sitting);
+        }
+
+
+
 
         if (x > window.innerWidth) {
 
