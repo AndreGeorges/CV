@@ -71,7 +71,7 @@ function startCharacter() {
     const animations = {
 
         walking: {
-            image: "../images/walking.png",
+            image: "images/walking.png",
             frames: 5,
             frameWidth: 600,
             loop: true,
@@ -80,7 +80,7 @@ function startCharacter() {
         },
 
         stopping: {
-            image: "../images/stopping.png",
+            image: "images/stopping.png",
             frames: 5,
             frameWidth: 600,
             loop: false,
