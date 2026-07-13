@@ -178,7 +178,7 @@ function startCharacter() {
         }
 
         animationTime = 0;
-
+        console.log(animation.image);
         character.style.backgroundImage =
             `url(${animation.image})`;
 
