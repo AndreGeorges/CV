@@ -386,44 +386,12 @@ CHARACTER
     mix-blend-mode: difference;
 
     z-index: 0;
-
-    /* animation: walking 1s steps(5) infinite, rebond 1s ease-in-out infinite alternate; */
 }
-
-/* forward 60s linear infinite,  */
 
 .page-noire .character {
     filter: invert(1);
 }
 
-/* @keyframes walking {
-    from {
-        background-position: 0 0;
-    }
-
-    to {
-        background-position: -3000px 0;
-    }
-} */
-/* 
-@keyframes forward {
-    from {
-        left: -100px;
-    }
-
-    to {
-        left: 110vw;
-    }
-} */
-
-/* @keyframes rebond {
-
-    0%,
-    100% {
-        bottom: -0.2vh;
-    }
-
-    50% {
-        bottom: 0vh;
-    }
-} */
+.character.flip {
+    transform: scaleX(-1) scale(0.25);
+}
