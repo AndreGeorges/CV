@@ -89,7 +89,7 @@ function startCharacter() {
         },
 
         standing: {
-            image: "../images/standing.png",
+            image: "images/standing.png",
             frames: 5,
             frameWidth: 600,
             loop: true,
@@ -97,7 +97,7 @@ function startCharacter() {
             frameDelay: 200
         },
         lookingup: {
-            image: "../images/lookingup.png",
+            image: "images/lookingup.png",
             frames: 5,
             frameWidth: 600,
             loop: true,
@@ -105,7 +105,7 @@ function startCharacter() {
             frameDelay: 200
         },
         turnaround: {
-            image: "../images/turnaround.png",
+            image: "images/turnaround.png",
             flip: false,
             frames: 5,
             frameWidth: 600,
@@ -114,7 +114,7 @@ function startCharacter() {
             frameDelay: 250
         },
         standing_fl: {
-            image: "../images/standing_fl.png",
+            image: "images/standing_fl.png",
             frames: 5,
             frameWidth: 600,
             loop: true,
@@ -122,7 +122,7 @@ function startCharacter() {
             frameDelay: 200
         },
         lookingup_fl: {
-            image: "../images/lookingup_fl.png",
+            image: "images/lookingup_fl.png",
             frames: 5,
             frameWidth: 600,
             loop: true,
@@ -130,7 +130,7 @@ function startCharacter() {
             frameDelay: 200
         },
         turnaround_right: {
-            image: "../images/turnaround.png",
+            image: "images/turnaround.png",
             flip: true,
             reverse: true,
             frames: 5,
@@ -140,7 +140,7 @@ function startCharacter() {
             frameDelay: 250
         },
         sitting: {
-            image: "../images/sitting_also_good.png",
+            image: "images/sitting_also_good.png",
             frames: 5,
             frameWidth: 600,
             loop: false,
@@ -148,7 +148,7 @@ function startCharacter() {
             frameDelay: 250
         },
         sitting_long: {
-            image: "../images/sitting_fl_lt.png",
+            image: "images/sitting_fl_lt.png",
             frames: 5,
             frameWidth: 600,
             loop: true,
