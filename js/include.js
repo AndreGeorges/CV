@@ -183,7 +183,7 @@ function startCharacter() {
             `url(${animation.image})`;
 
         character.style.backgroundPosition = "0px 0px";
-        character.style.transform = "scale(0.25)";
+        character.style.transform = "scale(  0.30)";
         character.classList.toggle("flip", animation.flip);
     }
 
@@ -354,7 +354,7 @@ function startCharacter() {
             direction = -1;
 
             // character.style.transform =
-            //     "scaleX(-1) scale(0.25)";
+            //     "scaleX(-1) scale(  0.30)";
 
         }
 
@@ -363,7 +363,7 @@ function startCharacter() {
             direction = 1;
 
             // character.style.transform =
-            //     "scale(0.25)";
+            //     "scale(  0.30)";
         }
         character.style.left = x + "px";
         const elapsed = time - startTime;
