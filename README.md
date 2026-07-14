@@ -1,4 +1,6 @@
 <!-- TODO:
+NAVBAR
+
 PAGE ACCUEIL:
 ajouter bouton
 

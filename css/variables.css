@@ -213,6 +213,15 @@ nav ul li a:hover {
     color: var(--blanc);
 }
 
+nav a.active {
+    text-decoration: underline;
+    color: var(--blanc);
+    margin: 1.1rem;
+    background-color: var(--noirtrans);
+    padding: 0.75rem 1.3rem;
+    border-radius: 0.5rem;
+}
+
 nav ul {
     text-align: right;
 
@@ -393,13 +402,18 @@ CHARACTER
 .page-noire .character {
     filter: invert(1);
     mix-blend-mode: difference;
-    
+
 }
 
 .page-sur-moi .character {
-    filter: brightness(0) contrast(200%);
+    filter: brightness(0) invert(1);
     opacity: 1;
-    z-index: 200;
+}
+
+.portfolio .character {
+    filter: brightness(0);
+    /* filter: brightness(0) invert(1); */
+    opacity: 1;
 }
 
 .character.flip {

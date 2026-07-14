@@ -16,6 +16,18 @@ function include(id, fichier, callback) {
             }
             el.innerHTML = html;
 
+            const currentPage = window.location.pathname.split("/").pop();
+
+            document.querySelectorAll("nav a").forEach(link => {
+                const linkPage = link.getAttribute("href");
+
+                if (linkPage === currentPage) {
+                    link.classList.add("active");
+                    console.log("ACTIVE :", linkPage);
+                }
+            });
+
+
             if (callback) {
                 callback();
             }
@@ -178,7 +190,7 @@ function startCharacter() {
         }
 
         animationTime = 0;
-        console.log(animation.image);
+        // console.log(animation.image);
         character.style.backgroundImage =
             `url(${animation.image})`;
 
