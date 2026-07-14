@@ -289,7 +289,7 @@ function startCharacter() {
             stateTime = 0;
             setAnimation(animations.lookingup);
         }
-        if (state === "lookingup" && standingPhase === 1 && stateTime >= 1000) {
+        if (state === "lookingup" && standingPhase === 1 && stateTime >= 3000) {
             state = "standing";
             stateTime = 0;
             standingPhase = 2;
@@ -312,7 +312,7 @@ function startCharacter() {
             standingPhase = 4;
             setAnimation(animations.lookingup);
         }
-        if (state === "lookingup" && standingPhase === 4 && stateTime >= 1000) {
+        if (state === "lookingup" && standingPhase === 4 && stateTime >= 3000) {
             state = "turnaround";
             stateTime = 0;
             standingPhase = 5;
@@ -324,7 +324,7 @@ function startCharacter() {
             // standingPhase = 5;
             setAnimation(animations.lookingup_fl);
         }
-        if (state === "lookingup_fl" && standingPhase === 5 && stateTime >= 1000) {
+        if (state === "lookingup_fl" && standingPhase === 5 && stateTime >= 3000) {
             state = "turnaround_right";
             stateTime = 0;
             standingPhase = 6;
@@ -340,7 +340,7 @@ function startCharacter() {
             stateTime = 0;
             setAnimation(animations.turnaround);
         }
-        if (state === "standing_fl" && standingPhase === 6 && stateTime >= 1000) {
+        if (state === "standing_fl" && standingPhase === 6 && stateTime >= 3000) {
             state = "sitting";
             stateTime = 0;
             setAnimation(animations.sitting);

@@ -383,7 +383,7 @@ CHARACTER
 
     transform: scale(0.30);
     transform-origin: bottom left;
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
 
     z-index: 0;
 
@@ -392,6 +392,7 @@ CHARACTER
 
 .page-noire .character {
     filter: invert(1);
+    mix-blend-mode: difference;
     
 }
 
